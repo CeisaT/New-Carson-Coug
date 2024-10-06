@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Homepage</title>
     <style>
-        /* Centering the image and title */
+        /* Centering the image */
         .centered-content {
             text-align: center;
         }
 
-        /* Ensuring the image is responsive */
+        /* Setting a fixed vertical height for the image */
         img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            object-fit: cover; /* Ensures the image scales properly */
         }
 
         /* Indent and center the main title */
@@ -23,23 +24,11 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#programs">Programs and Courses</a></li>
-                <li><a href="#contact">Contact Information</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
         <section id="home">
             <div class="centered-content">
-                <!-- Corrected image path -->
+                <!-- Image with reduced vertical size -->
                 <img src="Summer2020DroneAerialThompsonCore_0920-1900x1068-1.jpg" alt="Carson Coug Campus Image">
-                <h1>Welcome, New Carson Coug</h1>
             </div>
         </section>
 
