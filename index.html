@@ -32,6 +32,37 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
+        /* Section for the background image below "Welcome, New Carson Coug" */
+        .translucent-background {
+            background-image: url('350403344_253772923907654_1673025104480779912_n.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 40px 20px;
+            margin-top: 0;
+        }
+
+        /* Semi-transparent overlay */
+        .translucent-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black overlay */
+            z-index: 0;
+        }
+
+        /* Text inside translucent section */
+        .translucent-content {
+            position: relative;
+            z-index: 1; /* Ensure the text is above the translucent background */
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
         /* Section for YouTube video and Elevate Future content */
         .container {
             display: flex;
@@ -118,6 +149,13 @@
             <!-- Reduced-height Image Section with Overlay -->
             <img src="Summer2020DroneAerialThompsonCore_0920-1900x1068-1.jpg" alt="Carson Coug Campus Image">
             <div class="overlay-text">Welcome, New Carson Coug</div>
+        </div>
+    </section>
+
+    <!-- Translucent background section -->
+    <section class="translucent-background">
+        <div class="translucent-content">
+            <p>This is the translucent section that follows the Welcome message. The background is translucent and the text is easy to read.</p>
         </div>
     </section>
 
