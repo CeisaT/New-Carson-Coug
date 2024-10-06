@@ -32,35 +32,32 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* Section for the background image below "Welcome, New Carson Coug" */
-        .translucent-background {
+        /* Background applied to entire content below "Welcome, New Carson Coug" */
+        .background-container {
             background-image: url('350403344_253772923907654_1673025104480779912_n.jpg');
             background-size: cover;
             background-position: center;
             position: relative;
             padding: 40px 20px;
-            margin-top: 0;
+            color: white;
         }
 
-        /* Semi-transparent overlay */
-        .translucent-background::before {
+        /* Semi-transparent overlay to make text readable */
+        .background-container::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black overlay */
+            background-color: rgba(0, 0, 0, 0.6); /* 60% opacity black overlay */
             z-index: 0;
         }
 
-        /* Text inside translucent section */
-        .translucent-content {
+        /* Ensuring text appears above the translucent background */
+        .content-container {
             position: relative;
-            z-index: 1; /* Ensure the text is above the translucent background */
-            color: white;
-            text-align: center;
-            font-size: 1.5rem;
+            z-index: 1; /* Ensure text is above the translucent background */
         }
 
         /* Section for YouTube video and Elevate Future content */
@@ -71,59 +68,48 @@
             max-width: 1200px;
             margin: 20px auto; /* Reduced margin to decrease spacing */
         }
+
         .video {
             flex: 1;
             margin-right: 20px;
         }
 
-        /* Adjusted content background to white and text to black */
+        /* Adjusted content background */
         .content {
             flex: 1;
-            background-color: white; /* White background */
-            color: black; /* Changed text color to black */
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 10px; /* Reduce space after the content */
         }
 
         .content h2 {
-            color: black; /* Black for the heading */
             font-size: 2rem;
+            color: white; /* White text for readability */
         }
+
         .content p {
             font-size: 1.2rem;
             margin-top: 10px; /* Reduced top margin for paragraphs */
+            color: white; /* White text for readability */
         }
 
-        /* Footer styling - changed to red */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #A60F2D; /* Changed to red */
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Explore Our Program section styling */
+        /* Programs section styling */
         .program-list {
-            margin: 10px; /* Reduced margin to decrease spacing */
-            padding: 10px; /* Reduced padding */
+            margin: 10px;
+            padding: 10px;
         }
 
         .program-list h2 {
             margin-bottom: 10px;
-            font-size: 2rem; /* Match font size to "Elevate" */
-            color: black; /* Same black text as Elevate section */
+            font-size: 2rem;
+            color: white; /* White text for consistency */
         }
 
-        /* Horizontal layout for the programs */
         .horizontal-list {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             font-size: 1.1rem;
+            color: white; /* White text for program items */
         }
 
         .horizontal-list div {
@@ -132,12 +118,23 @@
         }
 
         .horizontal-list h3 {
-            color: #A60F2D; /* Carson Coug red for headings */
+            color: #FFD700; /* Gold for headings to stand out against the background */
             margin-bottom: 5px;
         }
 
         .horizontal-list p {
             margin: 0;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(166, 15, 45, 0.9); /* Red footer with slight transparency */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -152,63 +149,60 @@
         </div>
     </section>
 
-    <!-- Translucent background section -->
-    <section class="translucent-background">
-        <div class="translucent-content">
-            <p>This is the translucent section that follows the Welcome message. The background is translucent and the text is easy to read.</p>
-        </div>
-    </section>
-
-    <!-- Section with YouTube Video and "Elevate Your Future" Content -->
-    <div class="container">
-        <!-- Left Side: YouTube Video -->
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/fezx-LAZDgU" 
-            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <!-- Right Side: "Elevate Your Future" Content -->
-        <div class="content">
-            <h2>Elevate Your Future at Carson College of Business</h2>
-            <p>
-                Prepare to lead in the global marketplace with our comprehensive business education. 
-                Through the Next Carson Coug initiative, we blend technical expertise with essential professional 
-                skills, ensuring you're career-ready with ethical decision-making and data-driven problem-solving abilities.
-            </p>
-            <p>
-                Experience personalized learning, hands-on internships, and a global perspective. Connect with a robust 
-                network of alumni and industry leaders across the Pacific Northwest.
-            </p>
-            <p><strong>Unlock your potential—your journey to success starts here.</strong></p>
-        </div>
-    </div>
-
-    <!-- EXPLORE OUR PROGRAM Section -->
-    <section id="programs">
-        <!-- Change the font and size of "EXPLORE OUR PROGRAM" -->
-        <div class="program-list">
-            <h2>EXPLORE OUR PROGRAM</h2>
-
-            <!-- Horizontal layout for Bachelor of Arts in Business Administration -->
-            <div class="horizontal-list">
-                <div>
-                    <h3>Bachelor of Arts in Business Administration</h3>
-                    <p>Accounting, Finance, Marketing, Management Information Systems, International Business</p>
+    <!-- Background container for Elevate, Programs, and Contact Us sections -->
+    <section class="background-container">
+        <div class="content-container">
+            <!-- Section with YouTube Video and "Elevate Your Future" Content -->
+            <div class="container">
+                <!-- Left Side: YouTube Video -->
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fezx-LAZDgU" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <div>
-                    <h3>Bachelor of Arts in Hospitality Business Management</h3>
-                    <p>Hospitality, Senior Living Management, Wine and Beverage</p>
+                <!-- Right Side: "Elevate Your Future" Content -->
+                <div class="content">
+                    <h2>Elevate Your Future at Carson College of Business</h2>
+                    <p>
+                        Prepare to lead in the global marketplace with our comprehensive business education. 
+                        Through the Next Carson Coug initiative, we blend technical expertise with essential professional 
+                        skills, ensuring you're career-ready with ethical decision-making and data-driven problem-solving abilities.
+                    </p>
+                    <p>
+                        Experience personalized learning, hands-on internships, and a global perspective. Connect with a robust 
+                        network of alumni and industry leaders across the Pacific Northwest.
+                    </p>
+                    <p><strong>Unlock your potential—your journey to success starts here.</strong></p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Information Section -->
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Get in touch with us via email or phone for any inquiries.</p>
+            <!-- EXPLORE OUR PROGRAM Section -->
+            <section id="programs">
+                <div class="program-list">
+                    <h2>EXPLORE OUR PROGRAM</h2>
+
+                    <!-- Horizontal layout for Bachelor of Arts in Business Administration -->
+                    <div class="horizontal-list">
+                        <div>
+                            <h3>Bachelor of Arts in Business Administration</h3>
+                            <p>Accounting, Finance, Marketing, Management Information Systems, International Business</p>
+                        </div>
+
+                        <div>
+                            <h3>Bachelor of Arts in Hospitality Business Management</h3>
+                            <p>Hospitality, Senior Living Management, Wine and Beverage</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Information Section -->
+            <section id="contact">
+                <h2>Contact Information</h2>
+                <p>Get in touch with us via email or phone for any inquiries.</p>
+            </section>
+        </div>
     </section>
 
     <!-- Footer -->
