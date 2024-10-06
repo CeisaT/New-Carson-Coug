@@ -74,7 +74,7 @@
             width: 100%;
         }
 
-        /* Programs and Courses section styling */
+        /* Explore Our Program section styling */
         .program-list {
             margin: 20px;
             padding: 20px;
@@ -86,19 +86,26 @@
             color: black; /* Same black text as Elevate section */
         }
 
-        .program-list ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-
-        .program-list ul li {
-            margin-bottom: 5px;
+        /* Horizontal layout for the programs */
+        .horizontal-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
             font-size: 1.1rem;
         }
 
-        .program-list ul li::before {
-            content: "– "; /* Dash before list items */
-            color: black;
+        .horizontal-list div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .horizontal-list h3 {
+            color: #A60F2D; /* Carson Coug red for headings */
+            margin-bottom: 5px;
+        }
+
+        .horizontal-list p {
+            margin: 0;
         }
     </style>
 </head>
@@ -138,26 +145,24 @@
         </div>
     </div>
 
-    <!-- Programs and Courses Section -->
+    <!-- EXPLORE OUR PROGRAM Section -->
     <section id="programs">
-        <!-- Change the font and size of "Programs and Courses" -->
+        <!-- Change the font and size of "EXPLORE OUR PROGRAM" -->
         <div class="program-list">
-            <h2>Programs and Courses</h2>
-            <h3>Bachelor of Arts in Business Administration</h3>
-            <ul>
-                <li>Accounting</li>
-                <li>Finance</li>
-                <li>Marketing</li>
-                <li>Management Information Systems</li>
-                <li>International Business</li>
-            </ul>
+            <h2>EXPLORE OUR PROGRAM</h2>
 
-            <h3>Bachelor of Arts in Hospitality Business Management</h3>
-            <ul>
-                <li>Hospitality</li>
-                <li>Senior Living Management</li>
-                <li>Wine and Beverage</li>
-            </ul>
+            <!-- Horizontal layout for Bachelor of Arts in Business Administration -->
+            <div class="horizontal-list">
+                <div>
+                    <h3>Bachelor of Arts in Business Administration</h3>
+                    <p>Accounting, Finance, Marketing, Management Information Systems, International Business</p>
+                </div>
+
+                <div>
+                    <h3>Bachelor of Arts in Hospitality Business Management</h3>
+                    <p>Hospitality, Senior Living Management, Wine and Beverage</p>
+                </div>
+            </div>
         </div>
     </section>
 
