@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Homepage</title>
     <style>
-        /* Centering the image */
+        /* Centering the image and text */
         .centered-content {
+            position: relative;
             text-align: center;
         }
 
-        /* Setting a fixed vertical height for the image */
+        /* Styling the image */
         img {
             width: 100%;
             height: 300px; /* Adjust the height as needed */
-            object-fit: cover; /* Ensures the image scales properly */
+            object-fit: cover;
         }
 
-        /* Indent and center the main title */
-        h1 {
-            margin-top: 20px;
+        /* Styling the overlay text */
+        .centered-content h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-size: 48px; /* Adjust font size as needed */
+            font-family: Arial, sans-serif; /* Change font if desired */
+            font-weight: bold;
+            margin: 0;
         }
     </style>
 </head>
@@ -29,6 +38,8 @@
             <div class="centered-content">
                 <!-- Image with reduced vertical size -->
                 <img src="Summer2020DroneAerialThompsonCore_0920-1900x1068-1.jpg" alt="Carson Coug Campus Image">
+                <!-- Overlay title text -->
+                <h1>Welcome, New Carson Coug</h1>
             </div>
         </section>
 
