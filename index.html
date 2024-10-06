@@ -3,72 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Homepage</title>
     <style>
-        /* Centering the image and text */
-        .centered-content {
-            position: relative;
-            text-align: center;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
         }
-
-        /* Styling the image */
-        img {
-            width: 100%;
-            height: 300px; /* Adjust the height as needed */
-            object-fit: cover;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        /* Styling the overlay text */
-        .centered-content h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white; /* Changed font color to white */
-            font-size: 64px; /* Made the font size larger */
-            font-family: Arial, sans-serif; /* Change font if desired */
-            font-weight: bold;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better contrast */
+        .video {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .content {
+            flex: 1;
+            background-color: #3B007D; /* Dark purple background */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .content h1 {
+            color: #FFD700; /* Golden color for the heading */
+            font-size: 2.5rem;
+        }
+        .content p {
+            font-size: 1.2rem;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <main>
-        <section id="home">
-            <div class="centered-content">
-                <!-- Image with reduced vertical size -->
-                <img src="Summer2020DroneAerialThompsonCore_0920-1900x1068-1.jpg" alt="Carson Coug Campus Image">
-                <!-- Overlay title text -->
-                <h1>Welcome, New Carson Coug</h1>
-            </div>
-        </section>
 
-        <!-- Updated Proposition Section -->
-        <section id="proposition">
-            <h2>Elevate Your Future at Carson College of Business</h2>
-            <p>Prepare to lead in the global marketplace with our comprehensive business education. Through the Next Carson Coug initiative, we blend technical expertise with essential professional skills, ensuring you're career-ready with ethical decision-making and data-driven problem-solving abilities.</p>
-            <p>Experience personalized learning, hands-on internships, and a global perspective. Connect with a robust alumni network and industry leaders across the Pacific Northwest. Your journey to success starts here.</p>
-        </section>
+<div class="container">
+    <!-- Left Side: YouTube Video -->
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fezx-LAZDgU" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Learn more about our mission, vision, and the team behind our success.</p>
-        </section>
+    <!-- Right Side: "Elevate Your Future" Content -->
+    <div class="content">
+        <h1>Elevate Your Future at Carson College of Business</h1>
+        <p>
+            Prepare to lead in the global marketplace with our comprehensive business education. 
+            Through the Next Carson Coug initiative, we blend technical expertise with essential professional 
+            skills, ensuring you're career-ready with ethical decision-making and data-driven problem-solving abilities.
+        </p>
+        <p>
+            Experience personalized learning, hands-on internships, and a global perspective. Connect with a robust 
+            network of alumni and industry leaders across the Pacific Northwest.
+        </p>
+        <p><strong>Unlock your potential—your journey to success starts here.</strong></p>
+    </div>
+</div>
 
-        <section id="programs">
-            <h2>Programs and Courses</h2>
-            <p>Explore our wide range of programs and courses designed to help you achieve your goals.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <p>Get in touch with us via email or phone for any inquiries.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Our Website. All rights reserved.</p>
-    </footer>
 </body>
 </html>
