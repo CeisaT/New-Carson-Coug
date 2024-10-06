@@ -32,36 +32,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        /* Program grid styling */
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .program-item {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .program-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.5; /* Semi-transparent image */
-        }
-        .program-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.5rem;
-            font-weight: bold;
-            white-space: nowrap;
-        }
-
         /* Section for YouTube video and Elevate Future content */
         .container {
             display: flex;
@@ -110,10 +80,10 @@
             padding: 20px;
         }
 
-        .program-list h3 {
+        .program-list h2 {
             margin-bottom: 10px;
-            font-size: 1.5rem;
-            color: #A60F2D; /* Heading in Carson Coug red */
+            font-size: 2rem; /* Match font size to "Elevate" */
+            color: black; /* Same black text as Elevate section */
         }
 
         .program-list ul {
@@ -170,11 +140,9 @@
 
     <!-- Programs and Courses Section -->
     <section id="programs">
-        <h2>Programs and Courses</h2>
-        <p>Explore our wide range of programs and courses designed to help you achieve your goals.</p>
-
-        <!-- Bachelor Programs and Specializations -->
+        <!-- Change the font and size of "Programs and Courses" -->
         <div class="program-list">
+            <h2>Programs and Courses</h2>
             <h3>Bachelor of Arts in Business Administration</h3>
             <ul>
                 <li>Accounting</li>
@@ -190,34 +158,6 @@
                 <li>Senior Living Management</li>
                 <li>Wine and Beverage</li>
             </ul>
-        </div>
-
-        <!-- Program Grid Section -->
-        <div class="program-grid">
-            <div class="program-item">
-                <img src="https://example.com/undergraduate.jpg" alt="Undergraduate Programs">
-                <div class="program-title">Undergraduate Programs</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/mba.jpg" alt="MBA Programs">
-                <div class="program-title">MBA Programs</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/specialty.jpg" alt="Specialty Master's">
-                <div class="program-title">Specialty Master's</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/phd.jpg" alt="PhD Programs">
-                <div class="program-title">PhD Programs</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/executive.jpg" alt="Executive Education">
-                <div class="program-title">Executive Education</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/certificate.jpg" alt="Certificate Programs">
-                <div class="program-title">Certificate Programs</div>
-            </div>
         </div>
     </section>
 
