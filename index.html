@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Homepage</title>
     <style>
-        /* Ensuring the image is responsive and smaller */
+        /* Ensuring the image is responsive and full-width but reducing height */
         .centered-content {
             position: relative;
             text-align: center;
-            max-width: 1000px; /* Limit the max-width */
-            margin: 0 auto; /* Center the image horizontally */
+            max-width: 100%;
+            margin: 0 auto;
         }
 
-        img {
+        /* Adjusting image to be full-width but shorter in height */
+        .centered-content img {
             width: 100%; /* Make the image take full width */
-            height: auto; /* Maintain aspect ratio */
+            height: 400px; /* Control the height to make it shorter */
+            object-fit: cover; /* Ensures the image scales and crops properly */
         }
 
         /* Overlay text styling */
@@ -25,39 +27,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Program grid styling */
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .program-item {
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .program-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.5; /* Semi-transparent image */
-        }
-        .program-title {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.5rem;
-            font-weight: bold;
-            white-space: nowrap;
         }
 
         /* Section for YouTube video and Elevate Future content */
@@ -98,6 +70,7 @@
             bottom: 0;
             width: 100%;
         }
+
     </style>
 </head>
 <body>
@@ -105,70 +78,41 @@
     <!-- Top of the page: Image with Overlay Text -->
     <section id="home">
         <div class="centered-content">
-            <!-- Reduced-size Image Section with Overlay -->
+            <!-- Reduced-height Image Section with Overlay -->
             <img src="Summer2020DroneAerialThompsonCore_0920-1900x1068-1.jpg" alt="Carson Coug Campus Image">
             <div class="overlay-text">Welcome, New Carson Coug</div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Learn more about our mission, vision, and the team behind our success.</p>
-    </section>
-
-    <!-- Programs and Courses Section -->
-    <section id="programs">
-        <h2>Programs and Courses</h2>
-        <p>Explore our wide range of programs and courses designed to help you achieve your goals.</p>
-
-        <!-- Program Grid Section -->
-        <div class="program-grid">
-            <div class="program-item">
-                <img src="https://example.com/undergraduate.jpg" alt="Undergraduate Programs">
-                <div class="program-title">Undergraduate Programs</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/mba.jpg" alt="MBA Programs">
-                <div class="program-title">MBA Programs</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/specialty.jpg" alt="Specialty Master's">
-                <div class="program-title">Specialty Master's</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/phd.jpg" alt="PhD Programs">
-                <div class="program-title">PhD Programs</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/executive.jpg" alt="Executive Education">
-                <div class="program-title">Executive Education</div>
-            </div>
-            <div class="program-item">
-                <img src="https://example.com/certificate.jpg" alt="Certificate Programs">
-                <div class="program-title">Certificate Programs</div>
-            </div>
+    <!-- Section with YouTube Video and "Elevate Your Future" Content -->
+    <div class="container">
+        <!-- Left Side: YouTube Video -->
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fezx-LAZDgU" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <!-- Section with YouTube Video and "Elevate Your Future" Content -->
-        <div class="container">
-            <!-- Left Side: YouTube Video -->
-            <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fezx-LAZDgU" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+        <!-- Right Side: "Elevate Your Future" Content -->
+        <div class="content">
+            <h2>Elevate Your Future at Carson College of Business</h2>
+            <p>
+                Prepare to lead in the global marketplace with our comprehensive business education. 
+                Through the Next Carson Coug initiative, we blend technical expertise with essential professional 
+                skills, ensuring you're career-ready with ethical decision-making and data-driven problem-solving abilities.
+            </p>
+            <p>
+                Experience personalized learning, hands-on internships, and a global perspective. Connect with a robust 
+                network of alumni and industry leaders across the Pacific Northwest.
+            </p>
+            <p><strong>Unlock your potential—your journey to success starts here.</strong></p>
+        </div>
+    </div>
 
-            <!-- Right Side: "Elevate Your Future" Content -->
-            <div class="content">
-                <h2>Elevate Your Future at Carson College of Business</h2>
-                <p>
-                    Prepare to lead in the global marketplace with our comprehensive business education. 
-                    Through the Next Carson Coug initiative, we blend technical expertise with essential professional 
-                    skills, ensuring you're career-ready with ethical decision-making and data-driven problem-solving abilities.
-                </p>
-                <p>
-                    Experience personalized learning, hands-on internships, and a global perspective. Connect with a robust 
-                    network of alumni and industry leaders across the Pacific Northwest.
-                </p>
-                <p><strong>Unlock your potential—
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Our Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
