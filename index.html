@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Homepage</title>
     <style>
-        /* Centering the image and title */
+        /* Centering the image and overlaying title */
         .centered-content {
+            position: relative;
             text-align: center;
         }
 
@@ -16,9 +17,16 @@
             height: auto;
         }
 
-        /* Indent and center the main title */
-        h1 {
-            margin-top: 20px;
+        /* Overlay text */
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         /* Program grid styling */
@@ -111,7 +119,6 @@
 
     <!-- Header and Navigation -->
     <header>
-        <h1>Welcome to Our Website</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -124,15 +131,13 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Home Section -->
+        <!-- Home Section with Image and Overlayed Text -->
         <section id="home">
             <div class="centered-content">
-                <!-- Image Section -->
+                <!-- Image Section with Overlay -->
                 <img src="Summer2020DroneAerialThompsonCore_0920-1900x1068-1.jpg" alt="Carson Coug Campus Image">
-                <h1>Welcome, New Carson Coug</h1>
+                <div class="overlay-text">Welcome, New Carson Coug</div>
             </div>
-            <p>Welcome to our amazing website where you can find the best programs and courses tailored for your needs.</p>
-            <p>Through the Next Carson Coug initiative, we combine technical expertise with essential professional skills, ensuring graduates are career-ready with strong ethical decision-making, data-driven problem-solving, and leadership abilities.</p>
         </section>
 
         <!-- About Us Section -->
