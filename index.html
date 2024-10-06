@@ -75,17 +75,17 @@
             margin-right: 20px;
         }
 
-        /* Adjusted content background to white and text to red */
+        /* Adjusted content background to white and text to black */
         .content {
             flex: 1;
             background-color: white; /* White background */
-            color: #A60F2D; /* Carson Coug red */
+            color: black; /* Changed text color to black */
             padding: 20px;
             border-radius: 10px;
         }
 
         .content h2 {
-            color: #A60F2D; /* Carson Coug red for the heading */
+            color: black; /* Black for the heading */
             font-size: 2rem;
         }
         .content p {
@@ -102,6 +102,33 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Programs and Courses section styling */
+        .program-list {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .program-list h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #A60F2D; /* Heading in Carson Coug red */
+        }
+
+        .program-list ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .program-list ul li {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .program-list ul li::before {
+            content: "– "; /* Dash before list items */
+            color: black;
         }
     </style>
 </head>
@@ -145,6 +172,25 @@
     <section id="programs">
         <h2>Programs and Courses</h2>
         <p>Explore our wide range of programs and courses designed to help you achieve your goals.</p>
+
+        <!-- Bachelor Programs and Specializations -->
+        <div class="program-list">
+            <h3>Bachelor of Arts in Business Administration</h3>
+            <ul>
+                <li>Accounting</li>
+                <li>Finance</li>
+                <li>Marketing</li>
+                <li>Management Information Systems</li>
+                <li>International Business</li>
+            </ul>
+
+            <h3>Bachelor of Arts in Hospitality Business Management</h3>
+            <ul>
+                <li>Hospitality</li>
+                <li>Senior Living Management</li>
+                <li>Wine and Beverage</li>
+            </ul>
+        </div>
 
         <!-- Program Grid Section -->
         <div class="program-grid">
