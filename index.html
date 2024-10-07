@@ -42,7 +42,7 @@
             color: white;
         }
 
-        /* Semi-transparent overlay to make text readable */
+        /* Make the background image more translucent */
         .background-container::before {
             content: '';
             position: absolute;
@@ -50,7 +50,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.6); /* 60% opacity black overlay */
+            background-color: rgba(0, 0, 0, 0.7); /* Increased transparency to 70% */
             z-index: 0;
         }
 
@@ -117,8 +117,10 @@
             min-width: 200px;
         }
 
+        /* Brighter red and bigger font size for the "Bachelor" headings */
         .horizontal-list h3 {
-            color: #A60F2D; /* Carson Coug red for Bachelor headings */
+            color: #D32F2F; /* Brighter red for Carson Coug red */
+            font-size: 1.4rem; /* Increased font size */
             margin-bottom: 5px;
         }
 
@@ -133,9 +135,26 @@
             margin-bottom: 10px;
         }
 
+        /* Aligning the Contact section with Explore Our Program */
+        #contact {
+            text-align: left;
+            padding-left: 10px; /* Slight left padding for alignment */
+        }
+
         #contact p {
             font-size: 1.1rem; /* Match the text size of program items */
             color: white; /* White text for readability */
+        }
+
+        /* Styling for email and phone on the same line */
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+        }
+
+        .contact-info span {
+            margin-right: 20px; /* Space between email and phone */
         }
 
         /* Footer styling */
@@ -212,7 +231,10 @@
             <!-- Contact Information Section -->
             <section id="contact">
                 <h2>Contact Information</h2>
-                <p>Get in touch with us via email or phone for any inquiries.</p>
+                <div class="contact-info">
+                    <span>Email: business@wsu.edu</span>
+                    <span>Phone: (509) 335-5480</span>
+                </div>
             </section>
         </div>
     </section>
